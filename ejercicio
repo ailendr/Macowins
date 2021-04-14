@@ -16,7 +16,7 @@ objeto nueva
 
 clase Promocion
   constante valorARestar
-  metodo modificacionPrecio(precioBase) = precioBase - valorARestar
+  metodo modificarPrecio(precioBase) = precioBase - valorARestar
   
  objeto liquidacion
   metodo modiciarPrecio(precioBase) = precioBase - precioBase * 0.5
