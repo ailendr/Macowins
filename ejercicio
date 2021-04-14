@@ -4,7 +4,7 @@
 
 clase Prenda
   variable estado
-  constante tipo
+  constante tipo //Dice tipos en el requerimiento, pero lo dejé en singular porque no entiendo, por ejemplo, cómo una prenda de tipo camisa pueda ser del tipo pantalón también. 
   constante precioBase
   
   metodo tipo() = tipo
