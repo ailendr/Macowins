@@ -1,1 +1,52 @@
+//Requerimientos: En primera instancia, saber precio de venta de una prenda, y sus tipos.
+
 //pseudocódigo
+
+clase Prenda
+  variable estado
+  constante tipo
+  constante precioBase
+  
+  metodo tipo() = tipo
+  
+  metodo precio() = estado.modificarPrecio(precioBase)
+  
+objeto nueva
+   metodo modificarPrecio(precioBase) = precio
+
+clase Promocion
+  constante valorARestar
+  metodo modificacionPrecio(precioBase) = precioBase - valorARestar
+  
+ objeto liquidacion
+  metodo modiciarPrecio(precioBase) = precioBase - precioBase * 0.5
+  
+//Se añade otro requerimiento: Saber ganancias de un determinado dia
+
+objeto macowins
+   constante ventas = []
+   
+   metodo gananciaDelDia(dia) = self.ventasDelDia(dia).sum({venta => venta.ganancia()})
+   
+   metodo ventasDelDia(dia) = ventas.filter({venta => venta.fechaDeVenta().day() == dia})
+
+clase VentaEnEfectivo 
+  constante prendasVendias = []
+  constante fechaDeVenta = new Date ()
+  
+  metodo fechaDeVenta () = fechaDeVenta
+  
+  metodo cantidadDePrendasVendidas() = prendasVendidas.size() //No es un requerimiento, pero como decía que traía asociada la cantidad de prendas, lo deje así.
+  
+  metodo ganancia()  = prendas.sum({prenda => prenda.precio()})
+
+clase VentaConTarjeta hereda VentaEnEfectivo
+  constante coeficiente
+  constante cantidadCuotas
+  
+  override metodo ganancia() = super() + cantidadCuotas * coeficiente + self.ganancia() 
+
+
+
+
+
